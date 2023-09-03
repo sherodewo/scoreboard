@@ -1,0 +1,86 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basketball Score Board</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main>
+        <div class="rows-score">
+            <!-- left board -->
+            <div class="right-score">
+                <h1 class="team">HOME</h1>
+                <div class="score-box">
+                    <div id="score-left">0</div>
+                </div>
+                <div class="score-buttons">
+                    <button class="plus-score" onclick="add1ScoreLeft()">+ 1</button>
+                    <button class="plus-score" onclick="add2ScoreLeft()">+ 2</button>
+                    <button class="plus-score" onclick="add3ScoreLeft()">+ 3</button>
+                </div>
+                <div class="foul-counters">
+                    <p>Fouls</p>
+                    <p class="counts" id="foul-left">0<p>
+                    <button class="btn" onclick="add1FoulLeft()">+</button>
+                </div>
+                <div class="timeOut-counters">
+                    <p>Time Outs</p>
+                    <p class="counts" id="timeOutLeft">0<p>
+                    <button class="btn" onclick="add1TimeOutLeft()">+</button>
+                </div>
+            </div>
+            <!-- left board -->
+
+            <!-- mid row -->
+            <div class="counters">
+                <div class="period">
+                    <p class="counter-name">Period</p>
+                    <p class="counts" id="period-el">0<p>
+                    <button class="btn" onclick="add1Period()">+</button>
+                </div>
+                <div class="timer">
+                    <p class="counter-name">Timer</p>
+                    <p class="counts" id="timer_count">10:00</p>
+                    <div class="timer-buttons">
+                        <button class="btn" id="start_timer" onclick="startTimer()">Start</button>
+                        <button class="btn" id="pause_timer" onclick="pauseTimer()">Pause</button>
+                        <button class="btn" id="reset_timer" onclick="resetTimer()">Reset</button>
+                        <!-- <button class="btn">Resume</button> -->
+                    </div>
+                </div>
+                <div class="new-game">
+                    <button class="btn" onclick="newGame()">New Game</button>
+                </div>
+            </div>
+            <!-- mid row -->
+
+            <!-- right board -->
+            <div class="left-score">
+                <h1 class="team">GUESS</h1>
+                <div class="score-box">
+                    <div id="score-right">0</div>
+                </div>
+                <div class="score-buttons">
+                    <button class="plus-score" onclick="add1ScoreRight()">+ 1</button>
+                    <button class="plus-score" onclick="add2ScoreRight()">+ 2</button>
+                    <button class="plus-score" onclick="add3ScoreRight()">+ 3</button>
+                </div>
+                <div class="foul-counters">
+                    <p>Fouls</p>
+                    <p class="counts" id="foul-right">0<p>
+                    <button class="btn" onclick="add1FoulRight()">+</button>
+                </div>
+                <div class="timeOut-counters">
+                    <p>Time Outs</p>
+                    <p class="counts" id="timeOutRight">0<p>
+                    <button class="btn" onclick="addTimeOutRight()">+</button>
+                </div>
+            </div>
+            <!-- right board -->
+        </div>
+    </main>
+    <script src="scoreboard.js"></script>
+</body>
+</html>
